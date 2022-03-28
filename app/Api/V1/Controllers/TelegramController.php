@@ -32,7 +32,73 @@ class TelegramController extends Controller
         //
     }
 
+
+        /**
+     * @OA\Post(
+     *     path="/posts",
+     *     summary="New blog post",
+     *     operationId="store",
+     *     tags={"Post"},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         description="Post object",
+     *         @OA\JsonContent(ref="#/components/schemas/PostRequest")
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="A post",
+     *         @OA\JsonContent(ref="#/components/schemas/PostResponse"),
+     *     ),
+     *     @OA\Response(
+     *         response="default",
+     *         description="unexpected error",
+     *         @OA\Schema(ref="#/components/schemas/Error")
+     *     )
+     * )
+     * @param Request $request
+     * @return array
+     */
+
     //
+
+    public function subscribeUsersChatBot()
+    {
+
+    }
+
+            /**
+     * @OA\Post(
+     *     path="/posts",
+     *     summary="New blog post",
+     *     operationId="store",
+     *     tags={"Post"},
+     *     @OA\RequestBody(
+     *         required=true,
+     *         description="Post object",
+     *         @OA\JsonContent(ref="#/components/schemas/PostRequest")
+     *     ),
+     *     @OA\Response(
+     *         response=200,
+     *         description="A post",
+     *         @OA\JsonContent(ref="#/components/schemas/PostResponse"),
+     *     ),
+     *     @OA\Response(
+     *         response="default",
+     *         description="unexpected error",
+     *         @OA\Schema(ref="#/components/schemas/Error")
+     *     )
+     * )
+     * @param Request $request
+     * @return array
+     */
+
+     public function subscribeUserToChannel()
+     {
+
+     }
+
+
+
 
 
 

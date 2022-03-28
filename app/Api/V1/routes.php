@@ -5,6 +5,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/v1/test', [
-    'as' => 'test', 'uses' => 'TelegramController@test'
+$router->post('/v1/subscribe_chatbot', [
+    'as' => 'subscribe_chatbot', 'uses' => 'TelegramController@subscribeUsersChatBot'
+]);
+
+$router->post('/v1/subscribe_channel', [
+    'as' => 'subscribe_channel', 'uses' => 'TelegramController@subscribeUserToChannel'
 ]);
